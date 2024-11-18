@@ -6,7 +6,7 @@ const Banner = () => {
             <div id="slide1" className="carousel-item relative w-full">
                 <img
                     src="https://media.istockphoto.com/id/1181008199/photo/cheerful-businesswoman-meets-with-client.webp?a=1&b=1&s=612x612&w=0&k=20&c=N1vZMd8yn7QiSU2ZgDkjLPoAJJ-AVmKkXxZor9OE3Oc="
-                    className="w-full max-h-[500px] object-cover rounded-lg" />
+                    className="w-full max-h-[500px] min-h-[400px] object-cover rounded-lg" />
                 <div className='absolute w-full bg-[#9e969636] rounded-lg h-full'></div>
                 <div className='absolute p-8 pl-16 w-full md:w-3/5 lg:w-1/2 top-1/2 -translate-y-1/2'>
                     <h3 className='font-bold text-3xl text-third'>Find Your Path, Shape Your Future!</h3>
@@ -21,7 +21,7 @@ const Banner = () => {
             <div id="slide2" className="carousel-item relative w-full">
                 <img
                     src="https://media.istockphoto.com/id/1181008255/photo/mature-businesswoman-talks-withe-male-colleague.webp?a=1&b=1&s=612x612&w=0&k=20&c=ezTnbGij7Uo1grJVVuBEjY0vGC3rjEACrc_2qmYRdqU="
-                    className="w-full max-h-[500px] object-cover rounded-lg" />
+                    className="w-full max-h-[500px]  min-h-[400px] object-cover rounded-lg" />
 
                 <div className='absolute w-full bg-[#9e969636] rounded-lg h-full'></div>
 
@@ -38,7 +38,7 @@ const Banner = () => {
             <div id="slide3" className="carousel-item relative w-full">
                 <img
                     src="https://media.istockphoto.com/id/1891128165/photo/serious-senior-business-woman-employer-holding-resume-listening-candidate.jpg?s=612x612&w=0&k=20&c=G9ZXbhe9emWk9k8zN-hMVBsDs6xZyzwJkberSlwGjKQ="
-                    className="w-full max-h-[500px] object-cover rounded-lg" />
+                    className="w-full max-h-[500px] min-h-[400px] object-cover rounded-lg" />
                 <div className='absolute w-full bg-[#9e969636] rounded-lg h-full'></div>
                 <div className='absolute p-8 pl-16 w-full md:w-3/5 lg:w-1/2 top-1/2 -translate-y-1/2'>
                     <h3 className='font-bold text-3xl text-third'>Real Stories, Real Success!</h3>

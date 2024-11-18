@@ -9,9 +9,6 @@ const Navbar = () => {
 
     </>
 
-    console.log(import.meta.env.VITE_name);
-
-
     return (
         <div className='bg-primary text-secondary'>
         <div className=" max-w-7xl w-11/12 mx-auto navbar px-0 ">

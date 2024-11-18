@@ -6,12 +6,16 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import router from './routes/router';
+import DataProvider from './provider/DataProvider';
 
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <DataProvider>
+      
     <RouterProvider router={router} />
+    </DataProvider>
    
   </StrictMode>,
 )

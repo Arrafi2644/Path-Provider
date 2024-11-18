@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import ErrorPage from "../pages/ErrorPage";
 import Services from "../pages/Services";
+import ServiceDetails from "../pages/ServiceDetails";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
             {
                 path: '/services',
                 element: <Services></Services>
+            },
+            {
+                path: '/services/serviceDetails/:id',
+                element : <ServiceDetails></ServiceDetails>
             }
         ]
     },

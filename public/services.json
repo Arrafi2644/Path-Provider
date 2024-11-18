@@ -1,0 +1,134 @@
+[
+    {
+        "serviceId": "S001",
+        "image": "https://i.ibb.co.com/4ZdDmYT/1.webp",
+        "serviceName": "Career Counseling Sessions",
+        "category": "Online",
+        "description": "One-on-one sessions to explore career paths, set goals, and receive personalized guidance from experienced counselors.",
+        "pricing": "$50 per session",
+        "duration": "05-12-24, 5:00 PM - 6:00 PM",
+        "counselor": "Dr. Emily Carter",
+        "rating": 4.8
+    },
+    {
+        "serviceId": "S002",
+        "image": "https://i.ibb.co.com/LkqZzzW/22.webp",
+        "serviceName": "Resume Review",
+        "category": "Offline",
+        "description": "Professional review and optimization of your resume to align with your targeted roles and industries.",
+        "pricing": "$30 per review",
+        "duration": "Available on request",
+        "counselor": "Mr. John Smith",
+        "rating": 4.6
+    },
+    {
+        "serviceId": "S003",
+        "image": "https://i.ibb.co.com/DVjrzyJ/3.webp",
+        "serviceName": "Mock Interviews",
+        "category": "Group",
+        "description": "Practice and refine your interview skills with realistic scenarios and constructive feedback.",
+        "pricing": "$40 per session",
+        "duration": "12-12-24, 3:00 PM - 4:30 PM",
+        "counselor": "Ms. Sarah Lee",
+        "rating": 4.9
+    },
+    {
+        "serviceId": "S004",
+        "image": "https://i.ibb.co.com/3R7MGrk/4.webp",
+        "serviceName": "Skill Development Workshop",
+        "category": "Group",
+        "description": "Interactive workshops to enhance professional skills like communication, leadership, and time management.",
+        "pricing": "$25 per workshop",
+        "duration": "15-12-24, 10:00 AM - 12:00 PM",
+        "counselor": "Ms. Rachel Adams",
+        "rating": 4.7
+    },
+    {
+        "serviceId": "S005",
+        "image": "https://i.ibb.co.com/zmLTNSL/5.webp",
+        "serviceName": "Scholarship Guidance",
+        "category": "Online",
+        "description": "Get expert advice on selecting scholarships and writing compelling applications to secure funding for higher education.",
+        "pricing": "$60 per session",
+        "duration": "10-12-24, 4:00 PM - 5:30 PM",
+        "counselor": "Dr. Michael Taylor",
+        "rating": 4.9
+    },
+    {
+        "serviceId": "S006",
+        "image": "https://i.ibb.co.com/q091kwG/6.webp",
+        "serviceName": "Job Placement Support",
+        "category": "Offline",
+        "description": "Comprehensive support to help you find internships or entry-level jobs aligned with your skills and interests.",
+        "pricing": "$70 per service",
+        "duration": "Available on request",
+        "counselor": "Ms. Olivia Brown",
+        "rating": 4.5
+    },
+    {
+        "serviceId": "S007",
+        "image": "https://i.ibb.co.com/tLp5vq6/7.webp",
+        "serviceName": "Freelancing Career Counseling",
+        "category": "Online",
+        "description": "Expert guidance to build a freelancing career, from profile setup to acquiring clients and managing projects.",
+        "pricing": "$55 per session",
+        "duration": "08-12-24, 6:00 PM - 7:00 PM",
+        "counselor": "Mr. Jacob Wilson",
+        "rating": 4.7
+    },
+    {
+        "serviceId": "S008",
+        "image": "https://i.ibb.co.com/8D2d03Q/8.webp",
+        "serviceName": "Goal Setting Session",
+        "category": "Group",
+        "description": "Learn how to set realistic goals and create actionable plans to achieve long-term career aspirations.",
+        "pricing": "$35 per session",
+        "duration": "20-12-24, 11:00 AM - 12:30 PM",
+        "counselor": "Dr. Sophia Green",
+        "rating": 4.8
+    },
+    {
+        "serviceId": "S009",
+        "image": "https://i.ibb.co.com/DYVTxQH/9.webp",
+        "serviceName": "Networking Strategies Workshop",
+        "category": "Group",
+        "description": "Master networking skills to build meaningful professional connections and unlock new career opportunities.",
+        "pricing": "$30 per workshop",
+        "duration": "25-12-24, 2:00 PM - 4:00 PM",
+        "counselor": "Ms. Emma Davis",
+        "rating": 4.9
+    },
+    {
+        "serviceId": "S010",
+        "image": "https://i.ibb.co.com/L0Lm0cS/10.webp",
+        "serviceName": "Public Speaking Coaching",
+        "category": "Online",
+        "description": "Improve your public speaking skills with practical tips, techniques, and expert guidance for confident presentations.",
+        "pricing": "$45 per session",
+        "duration": "28-12-24, 7:00 PM - 8:00 PM",
+        "counselor": "Mr. Adam Clarke",
+        "rating": 4.8
+      },
+      {
+        "serviceId": "S011",
+        "image": "https://i.ibb.co.com/vP2Dh87/11.webp",
+        "serviceName": "College Preparation Guidance",
+        "category": "Offline",
+        "description": "Comprehensive support for choosing the right college, preparing applications, and navigating admissions processes.",
+        "pricing": "$65 per session",
+        "duration": "Available on request",
+        "counselor": "Dr. Megan Roberts",
+        "rating": 4.9
+      },
+      {
+        "serviceId": "S012",
+        "image": "https://i.ibb.co.com/jRtf9RF/12.webp",
+        "serviceName": "Time Management Workshop",
+        "category": "Group",
+        "description": "Learn proven time management techniques to boost productivity and balance work, studies, and personal goals effectively.",
+        "pricing": "$35 per workshop",
+        "duration": "30-12-24, 3:00 PM - 5:00 PM",
+        "counselor": "Ms. Lauren Blake",
+        "rating": 4.7
+      }
+]
