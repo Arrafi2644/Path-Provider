@@ -7,7 +7,7 @@ const MainLayout = () => {
     return (
         <div className=' font-roboto'>
             <Navbar></Navbar>
-            <div className='my-10 max-w-7xl w-11/12 mx-auto'>
+            <div className=' max-w-7xl w-11/12 mx-auto'>
                 <Outlet></Outlet>
             </div>
             <Footer></Footer>
