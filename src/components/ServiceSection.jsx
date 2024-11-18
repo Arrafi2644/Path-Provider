@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import ServiceCart from './serviceCart';
 import { Link } from 'react-router-dom';
+import { DataContext } from '../provider/DataProvider';
 
 
 const ServiceSection = () => {
-    const [services, setServices] = useState([]);
+    // const [services, setServices] = useState([]);
+    const {services, setServices} = useContext(DataContext)
     
     useEffect(()=>{
         fetch('/services.json')

@@ -1,12 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { DataContext } from '../provider/DataProvider';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 const ServiceDetails = () => {
     const { services, activeCategory } = useContext(DataContext)
-    // console.log(services);
-    // console.log(activeCategory);
+    const [feedback, setFeedback] = useState(null);
 
     const showServiceDetails = services?.filter(item => item.serviceId === activeCategory);
     // console.log(showServiceDetails);
@@ -19,9 +18,18 @@ const ServiceDetails = () => {
         navigate('/')
     }
 
+    const handleFeedback = (e) => {
+     e.preventDefault();
+     const feedbackMessage = e.target.feedback.value;
+     setFeedback(feedbackMessage);
+     e.target.reset()
+
+    }
+  
+
     return (
-        <div>
-            <div className='mt-4 flex flex-col lg:flex-row gap-6 bg-primary p-6 rounded-lg'>
+        <div className='mt-4 p-6 bg-primary rounded-lg'>
+            <div className='flex flex-col lg:flex-row gap-6 '>
                 <div>
                     <img className='rounded-lg' src={image} alt="" />
                 </div>
@@ -52,6 +60,20 @@ const ServiceDetails = () => {
 
 
                 </div>
+            </div>
+            <div className='mt-8 text-third'>
+                <h2 className='text-2xl font-bold text-center '>Feedback for this service</h2>
+                 <div >
+                    {
+                        feedback && <div className='p-4 text-gray-500 mt-2 border rounded-lg'>
+                            <p>{feedback}</p>
+                        </div>
+                    }
+                 </div>
+                <form onSubmit={handleFeedback}>
+                <textarea name='feedback' className="textarea text-secondary textarea-bordered w-full mt-4" placeholder="Write your feedback"></textarea>
+                <input className="btn bg-third text-primary" type="submit" value="Feedback" />
+                </form>
             </div>
         </div>
     );

@@ -5,7 +5,7 @@ export const DataContext = createContext(null);
 const DataProvider = ({children}) => {
 
     const [activeCategory, setActiveCategory] = useState(null);
-    const [services, setServices] = useState(null);
+    const [services, setServices] = useState([]);
    
     const data = {
         activeCategory,
