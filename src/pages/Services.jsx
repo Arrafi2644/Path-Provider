@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import ServiceCart from '../components/serviceCart';
-import { Link } from 'react-router-dom';
 import { DataContext } from '../provider/DataProvider';
 
 

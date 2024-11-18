@@ -6,6 +6,9 @@ import ErrorPage from "../pages/ErrorPage";
 import Services from "../pages/Services";
 import ServiceDetails from "../pages/ServiceDetails";
 
+import Profile from "../pages/Profile";
+import Dashboard from "../pages/Dashboard";
+
 const router = createBrowserRouter([
     {
         path: "/",
@@ -27,6 +30,14 @@ const router = createBrowserRouter([
             {
                 path: '/services/serviceDetails/:id',
                 element : <ServiceDetails></ServiceDetails>
+            },
+            {
+                path: '/dashboard',
+                element: <Dashboard></Dashboard>
+            },
+            {
+                path: '/profile',
+                element: <Profile></Profile>
             }
         ]
     },

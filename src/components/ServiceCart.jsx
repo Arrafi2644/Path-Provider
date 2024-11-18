@@ -3,9 +3,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import { DataContext } from '../provider/DataProvider';
 
 const ServiceCart = ({service}) => {
-    // console.log(service);
+    console.log(service);
     const {serviceId, image, serviceName, category, pricing, counselor} = service;
     const {activeCategory, setActiveCategory} = useContext(DataContext)
+    // console.log(service);
     // console.log(activeCategory);
     const navigate = useNavigate()
     

@@ -6,13 +6,18 @@ const DataProvider = ({children}) => {
 
     const [activeCategory, setActiveCategory] = useState(null);
     const [services, setServices] = useState([]);
+    const [bookedService, setBookedService] = useState([])
    
     const data = {
         activeCategory,
         setActiveCategory,
         services,
-        setServices
+        setServices,
+        bookedService,
+        setBookedService
     }
+
+    // console.log(bookedService);
 
     return (
        <DataContext.Provider value={data}>

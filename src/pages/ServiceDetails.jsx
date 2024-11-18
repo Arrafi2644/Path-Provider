@@ -4,25 +4,31 @@ import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 const ServiceDetails = () => {
-    const { services, activeCategory } = useContext(DataContext)
+    const { services, activeCategory, bookedService , setBookedService } = useContext(DataContext)
     const [feedback, setFeedback] = useState(null);
 
     const showServiceDetails = services?.filter(item => item.serviceId === activeCategory);
     // console.log(showServiceDetails);
 
     const { serviceId, image, serviceName, category, description, pricing, duration, counselor, rating } = showServiceDetails?.[0];
+    const booked = showServiceDetails?.[0];
     const navigate = useNavigate()
 
     const purchasePlan = () => {
-        toast.success("Congratulation.!!! Successfully purchased.")
         navigate('/')
+        if(bookedService.length < 1) {
+            setBookedService(booked)
+            toast.success("Congratulation.!!! Successfully purchased.")
+        }else{
+            toast.error("Already selected plan. You can't select multiple at a time.!!!")
+        }
     }
 
     const handleFeedback = (e) => {
      e.preventDefault();
      const feedbackMessage = e.target.feedback.value;
      setFeedback(feedbackMessage);
-     e.target.reset()
+     e.target.reset();
 
     }
   
@@ -35,11 +41,11 @@ const ServiceDetails = () => {
                 </div>
                 <div className='text-gray-500 space-y-2'>
                     <h2 className='text-2xl font-semibold text-third'>{serviceName}</h2>
-                    <div className='flex items-center justify-between gap-6'>
+                    <div className='flex items-center justify-between flex-col md:flex-row gap-6'>
                         <p className=''>Category: {category}</p>
                         <p className=''>Fee: {pricing}</p>
                     </div>
-                    <div className='flex items-center justify-between gap-6'>
+                    <div className='flex items-center justify-between flex-col md:flex-row gap-6'>
                         <p>Duration: {duration}</p>
                         <p className=''>Counselor: {counselor}</p>
                     </div>
