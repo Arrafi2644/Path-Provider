@@ -5,9 +5,10 @@ const Footer = () => {
         <div className='bg-primary text-secondary mt-10'>
             <section className='max-w-7xl w-11/12 mx-auto py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6'>
                 <aside className='lg:col-span-2'>
+
+                    <h2 className='font-bold text-3xl text-third'>Pathfinder</h2>
+                    <br />
                     <p className=''>
-                        <h2 className='font-bold text-3xl text-third'>Pathfinder</h2>
-                        <br />
                         Pathfinder empowers individuals with expert career guidance, personalized tools, and resources to explore opportunities, unlock potential, and achieve fulfilling professional and academic goals.
                     </p>
                 </aside>

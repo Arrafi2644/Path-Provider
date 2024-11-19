@@ -1,0 +1,18 @@
+import React from 'react';
+
+const DashboardBanner = () => {
+    return (
+        <div className=''>
+            <div className='relative'>
+                <img className='w-full max-h-56 object-cover' src="https://i.ibb.co.com/bFBwHrH/pexels-olly-3760069.jpg" alt="" />
+
+                <div className='text-center absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2'>
+                    <h2 className='font-semibold text-2xl'>Dashboard</h2>
+                    <p>Your personalized Dashboard offers easy access to upcoming sessions, completed milestones, recommended services, resources, and progress tracking to keep your career journey organized and efficient.</p>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default DashboardBanner;

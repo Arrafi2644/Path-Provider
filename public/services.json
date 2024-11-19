@@ -8,6 +8,7 @@
         "pricing": "$50 per session",
         "duration": "05-12-24, 5:00 PM - 6:00 PM",
         "counselor": "Dr. Emily Carter",
+        "counselorId": "c1",
         "counselorDetails": {
             "counselorImage": "https://i.ibb.co.com/NLC5QYt/c1.jpg",
             "experience": "10+ years in career counseling and coaching.",
@@ -39,6 +40,7 @@
         "pricing": "$30 per review",
         "duration": "Available on request",
         "counselor": "Mr. John Smith",
+        "counselorId": "c2",
         "counselorDetails": {
             "counselorImage": "https://i.ibb.co.com/n80kd0M/c2.jpg",
             "experience": "8+ years in recruitment and HR consultancy.",
@@ -70,6 +72,7 @@
         "pricing": "$40 per session",
         "duration": "12-12-24, 3:00 PM - 4:30 PM",
         "counselor": "Ms. Sarah Lee",
+        "counselorId": "c3",
         "counselorDetails": {
             "counselorImage": "https://i.ibb.co.com/S5pNFgc/c3.jpg",
             "experience": "7+ years in corporate recruitment and training.",
@@ -101,6 +104,7 @@
         "pricing": "$25 per workshop",
         "duration": "15-12-24, 10:00 AM - 12:00 PM",
         "counselor": "Ms. Rachel Adams",
+        "counselorId": "c4",
         "counselorDetails": {
             "counselorImage": "https://i.ibb.co.com/Hr7Sv0s/c4.jpg",
             "experience": "5+ years in skill training and corporate workshops.",
@@ -132,6 +136,7 @@
         "pricing": "$60 per session",
         "duration": "10-12-24, 4:00 PM - 5:30 PM",
         "counselor": "Dr. Michael Taylor",
+        "counselorId": "c5",
         "counselorDetails": {
             "counselorImage": "https://i.ibb.co.com/dPN0WRY/c5.jpg",
             "experience": "12+ years in education consultancy and scholarship advising.",
@@ -163,6 +168,7 @@
         "pricing": "$70 per service",
         "duration": "Available on request",
         "counselor": "Ms. Olivia Brown",
+        "counselorId": "c6",
         "counselorDetails": {
             "counselorImage": "https://i.ibb.co.com/w4wXTfn/c6.jpg",
             "experience": "6+ years in career placement and HR advisory.",
@@ -194,8 +200,9 @@
         "pricing": "$55 per session",
         "duration": "08-12-24, 6:00 PM - 7:00 PM",
         "counselor": "Mr. Jacob Wilson",
+        "counselorId": "c7",
         "counselorDetails": {
-            "counselorImage": "https://i.ibb.co.com/48gqk0Y/c7.jpg",
+            "counselorImage": "https://i.ibb.co.com/hDQ5qcc/c7.jpg",
             "experience": "8+ years in freelancing and digital marketing.",
             "qualification": "B.A. in Digital Marketing, Certified Freelancing Expert.",
             "counselorDescription": "Mr. Jacob Wilson has 8+ years of experience in freelancing, helping individuals build sustainable careers and gain high-paying clients."
@@ -218,15 +225,16 @@
     },
     {
         "serviceId": "S008",
-        "image": "https://i.ibb.co.com/vhBz0P2/8.webp",
+        "image": "https://i.ibb.co.com/cxW9Cxt/9.webp",
         "serviceName": "Networking Skills Development",
         "category": "Group",
         "description": "Learn the art of networking effectively in professional environments to expand your opportunities.",
         "pricing": "$35 per workshop",
         "duration": "17-12-24, 10:00 AM - 11:30 AM",
         "counselor": "Ms. Grace Lee",
+        "counselorId": "c8",
         "counselorDetails": {
-            "counselorImage": "https://i.ibb.co.com/8BBn0TW/c8.jpg",
+            "counselorImage": "https://i.ibb.co.com/RDv06KF/c8.jpg",
             "experience": "6+ years in communication and professional networking.",
             "qualification": "B.A. in Marketing, Certified Networking Specialist.",
             "counselorDescription": "Ms. Grace Lee has 6+ years of experience in communication and networking, focusing on strategies for building strong professional relationships."
@@ -249,15 +257,16 @@
     },
     {
         "serviceId": "S009",
-        "image": "https://i.ibb.co.com/F96Zq27/9.webp",
+        "image": "https://i.ibb.co.com/zSdsk8L/8.webp",
         "serviceName": "Career Path Mapping",
         "category": "Online",
         "description": "In-depth mapping of your career path, aligning your goals, skills, and interests with the best opportunities.",
         "pricing": "$70 per session",
         "duration": "15-12-24, 12:00 PM - 1:30 PM",
         "counselor": "Mr. Brian Hall",
+        "counselorId": "c9",
         "counselorDetails": {
-            "counselorImage": "https://i.ibb.co.com/Jy9DXdS/c9.jpg",
+            "counselorImage": "https://i.ibb.co.com/XpFGJ6j/c99.jpg",
             "experience": "10+ years in career path planning and talent development.",
             "qualification": "M.A. in Psychology, Certified Career Development Specialist.",
             "counselorDescription": "Mr. Brian Hall has over 10 years of experience in career path mapping, helping clients define and achieve their career goals through strategic planning."
@@ -280,15 +289,16 @@
     },
     {
         "serviceId": "S010",
-        "image": "https://i.ibb.co.com/tkQz9Q3/10.webp",
+        "image": "https://i.ibb.co.com/tHg5mzr/100.jpg",
         "serviceName": "Portfolio Building Assistance",
         "category": "Offline",
         "description": "Get hands-on assistance with creating a professional portfolio to showcase your skills and experience.",
         "pricing": "$45 per session",
         "duration": "Available on request",
         "counselor": "Ms. Patricia Gomez",
+        "counselorId": "c10",
         "counselorDetails": {
-            "counselorImage": "https://i.ibb.co.com/7g3LXXk/c10.jpg",
+            "counselorImage": "https://i.ibb.co.com/5TgfqfZ/c100.jpg",
             "experience": "8+ years in design and portfolio development.",
             "qualification": "B.A. in Fine Arts, Certified Portfolio Expert.",
             "counselorDescription": "Ms. Patricia Gomez has 8+ years of experience helping professionals and creatives build strong portfolios for career growth."
@@ -311,15 +321,16 @@
     },
     {
         "serviceId": "S011",
-        "image": "https://i.ibb.co.com/5BcvnN2/11.webp",
+        "image": "https://i.ibb.co.com/r5RnfvM/10.webp",
         "serviceName": "Salary Negotiation Coaching",
         "category": "Online",
         "description": "Expert coaching on how to negotiate your salary and benefits to maximize your compensation package.",
         "pricing": "$75 per session",
         "duration": "06-12-24, 3:00 PM - 4:30 PM",
         "counselor": "Mr. Andrew Stewart",
+        "counselorId": "c11",
         "counselorDetails": {
-            "counselorImage": "https://i.ibb.co.com/xDKk9w9/c11.jpg",
+            "counselorImage": "https://i.ibb.co.com/LgjHNdr/c111.jpg",
             "experience": "12+ years in HR and salary negotiation consulting.",
             "qualification": "M.A. in Human Resources, Certified Salary Negotiation Specialist.",
             "counselorDescription": "Mr. Andrew Stewart has over 12 years of experience in salary negotiation coaching, assisting clients in securing better compensation packages."
@@ -342,18 +353,19 @@
     },
     {
         "serviceId": "S012",
-        "image": "https://i.ibb.co.com/NT5TH7D/12.webp",
-        "serviceName": "Job Search Strategy",
+        "image": "https://i.ibb.co.com/bPnX00w/12.webp",
+        "serviceName": "Time Management Workshop",
         "category": "Online",
-        "description": "Learn how to create a personalized job search strategy to target the right opportunities and stand out in the competitive job market.",
+        "description": "Learn proven techniques to manage time effectively, boost productivity, and balance work, studies, and personal goals.",
         "pricing": "$60 per session",
         "duration": "10-12-24, 5:30 PM - 7:00 PM",
         "counselor": "Ms. Julia Davis",
+        "counselorId": "c12",
         "counselorDetails": {
-            "counselorImage": "https://i.ibb.co.com/bG9t17Q/c12.jpg",
-            "experience": "10+ years in job placement and career strategy.",
-            "qualification": "B.S. in Career Counseling, Certified Career Strategist.",
-            "counselorDescription": "Ms. Julia Davis has over 10 years of experience in job search strategies, guiding clients to find the right job opportunities in the market."
+            "counselorImage": "https://i.ibb.co.com/SdVqp5x/c122.jpg",
+            "experience": "6+ years in productivity coaching and time management training.",
+            "qualification": "Bachelor's in Psychology, Certified Time Management Trainer.",
+            "counselorDescription": "Ms. Olivia specializes in helping individuals master time management skills to maximize efficiency and achieve their professional and personal goals."
         },
         "rating": 4.7,
         "schedule": [

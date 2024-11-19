@@ -8,6 +8,9 @@ import ServiceDetails from "../pages/ServiceDetails";
 
 import Profile from "../pages/Profile";
 import Dashboard from "../pages/Dashboard";
+import CounselorDetailsPage from "../pages/CounselorDetailsPage";
+import Login from "../pages/Login";
+import SignUp from "../pages/SignUp";
 
 const router = createBrowserRouter([
     {
@@ -38,6 +41,18 @@ const router = createBrowserRouter([
             {
                 path: '/profile',
                 element: <Profile></Profile>
+            },
+            {
+                path: '/counselorDetails/:id',
+                element: <CounselorDetailsPage></CounselorDetailsPage>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/signup',
+                element: <SignUp></SignUp>
             }
         ]
     },

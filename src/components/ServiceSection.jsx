@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import ServiceCart from './serviceCart';
 import { Link } from 'react-router-dom';
 import { DataContext } from '../provider/DataProvider';
+import { FaArrowRightLong } from "react-icons/fa6";
 
 
 const ServiceSection = () => {
@@ -26,7 +27,7 @@ const ServiceSection = () => {
                }
             </div>
            <div className='flex justify-center md:justify-end'>
-           <Link to='/services' className="btn bg-third text-primary mt-4 ">Explore All Services</Link>
+           <Link to='/services' className="btn bg-third text-primary mt-4 ">Explore All Services <span><FaArrowRightLong></FaArrowRightLong></span></Link>
            </div>
         </div>
     );
