@@ -11,8 +11,10 @@ import Dashboard from "../pages/Dashboard";
 import CounselorDetailsPage from "../pages/CounselorDetailsPage";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
+import privateRoute from "./PrivateRoute";
+import PrivateRoute from "./PrivateRoute";
 
-const router = createBrowserRouter([
+const Router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayout></MainLayout>,
@@ -32,11 +34,11 @@ const router = createBrowserRouter([
             },
             {
                 path: '/services/serviceDetails/:id',
-                element : <ServiceDetails></ServiceDetails>
+                element : <PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>
             },
             {
                 path: '/dashboard',
-                element: <Dashboard></Dashboard>
+                element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
             },
             {
                 path: '/profile',
@@ -44,7 +46,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/counselorDetails/:id',
-                element: <CounselorDetailsPage></CounselorDetailsPage>
+                element: <PrivateRoute><CounselorDetailsPage></CounselorDetailsPage></PrivateRoute>
             },
             {
                 path: '/login',
@@ -58,4 +60,4 @@ const router = createBrowserRouter([
     },
 ]);
 
-export default router;
+export default Router;

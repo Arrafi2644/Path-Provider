@@ -8,6 +8,7 @@ import {
 import router from './routes/router';
 import DataProvider from './provider/DataProvider';
 import AuthProvider from './provider/AuthProvider';
+import Router from './routes/router';
 
 
 
@@ -15,7 +16,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
       <DataProvider>
-        <RouterProvider router={router} />
+        <RouterProvider router={Router} />
       </DataProvider>
     </AuthProvider>
 

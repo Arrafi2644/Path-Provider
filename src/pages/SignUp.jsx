@@ -1,8 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../provider/AuthProvider';
 
 const SignUp = () => {
+const {signUpUser, updateUserNamePhoto} = useContext(AuthContext)
+const navigate = useNavigate()
 
+// console.log(signUpUser);
  const handleSignup = (e) => {
     e.preventDefault();
 
@@ -13,6 +17,18 @@ const SignUp = () => {
     const password = form.get('password');
     console.log(name, photo, email, password);
 
+    signUpUser(email, password)
+    .then(result => {
+      console.log(result.user);
+      updateUserNamePhoto({displayName: name, photoURL: photo})
+      .then(()=>{
+          navigate('/')
+      }).catch(err => {
+        console.log(err);
+      })
+    }).catch(err => {
+      console.log(err.message);
+    })
  }
 
     return (
