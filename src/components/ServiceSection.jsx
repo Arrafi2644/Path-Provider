@@ -26,7 +26,7 @@ const ServiceSection = () => {
                }
             </div>
            <div className='flex justify-center md:justify-end'>
-           <Link to='/services' className="btn bg-third text-primary mt-4 ">Show All Services</Link>
+           <Link to='/services' className="btn bg-third text-primary mt-4 ">Explore All Services</Link>
            </div>
         </div>
     );

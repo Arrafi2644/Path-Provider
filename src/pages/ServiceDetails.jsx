@@ -15,14 +15,11 @@ const ServiceDetails = () => {
     const navigate = useNavigate()
 
     const purchasePlan = () => {
-        navigate('/')
-        if(bookedService.length < 1) {
+        navigate('/dashboard')
             setBookedService(booked)
-            toast.success("Congratulation.!!! Successfully purchased.")
-        }else{
-            toast.error("Already selected plan. You can't select multiple at a time.!!!")
+            toast.success("Congratulation.!!! Successfully purchased.")   
         }
-    }
+    
 
     const handleFeedback = (e) => {
      e.preventDefault();

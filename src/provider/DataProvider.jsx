@@ -7,7 +7,7 @@ const DataProvider = ({children}) => {
     const [activeCategory, setActiveCategory] = useState(null);
     const [services, setServices] = useState([]);
     const [bookedService, setBookedService] = useState([])
-   
+  //  console.log(services);
     const data = {
         activeCategory,
         setActiveCategory,
