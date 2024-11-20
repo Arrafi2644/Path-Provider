@@ -7,8 +7,8 @@ const DashboardBanner = () => {
                 <img className='w-full max-h-56 object-cover' src="https://i.ibb.co.com/bFBwHrH/pexels-olly-3760069.jpg" alt="" />
 
                 <div className='text-center absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2'>
-                    <h2 className='font-semibold text-2xl'>Dashboard</h2>
-                    <p>Your personalized Dashboard offers easy access to upcoming sessions, completed milestones, recommended services, resources, and progress tracking to keep your career journey organized and efficient.</p>
+                    <h2 className='font-semibold text-2xl text-secondary'>Dashboard</h2>
+                    <p className='font-medium text-gray-600'>Your personalized hub for insights, progress, and expert career guidance.</p>
                 </div>
             </div>
         </div>

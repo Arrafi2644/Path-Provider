@@ -7,8 +7,8 @@ const ServicesBanner = () => {
                 <img className='w-full max-h-56 object-cover' src="https://i.ibb.co.com/bFBwHrH/pexels-olly-3760069.jpg" alt="" />
 
                 <div className='text-center absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2'>
-                    <h2 className='font-semibold text-2xl'>Our Services</h2>
-                    <p>Explore tailored career counseling, skill development, resume building, and interview preparation to empower your journey and achieve your professional and academic aspirations. </p>
+                    <h2 className='font-semibold text-2xl text-secondary'>Our Services</h2>
+                    <p className='font-medium text-gray-600'>Explore tailored career services designed to shape your professional future.</p>
                 </div>
             </div>
         </div>

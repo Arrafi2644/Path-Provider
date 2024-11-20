@@ -52,7 +52,7 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end gap-1">
                     {
                         (user && user?.photoURL) ? <img className={`w-10 h-10 rounded-full cursor-pointer `} src={user?.photoURL} alt="" title={user.displayName} /> : user ? <h2> {user?.dislayName}</h2> : "" 
                       
