@@ -4,6 +4,7 @@ import { GiSkills } from "react-icons/gi";
 import { GoGoal } from "react-icons/go";
 import { FaPersonRays } from "react-icons/fa6";
 
+
 const CoachingBenefits = () => {
     return (
         <section>

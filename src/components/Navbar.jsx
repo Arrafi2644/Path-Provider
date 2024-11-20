@@ -20,10 +20,6 @@ const Navbar = () => {
 
     </>
 
-    const showName = () => {
-        console.log("mouse on over");
-    }
-
     return (
         <div className='bg-primary text-secondary sticky top-0 left-0 z-10'>
             <div className=" max-w-7xl w-11/12 mx-auto navbar px-0 ">
@@ -57,10 +53,14 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
+                    {
+                        (user && user?.photoURL) ? <img className={`w-10 h-10 rounded-full cursor-pointer `} src={user?.photoURL} alt="" title={user.displayName} /> : user ? <h2> {user?.dislayName}</h2> : "" 
+                      
+                    }
 
                     {
                         user ? <div className='flex gap-2 items-center'>
-                           <img className={`w-10 h-10 rounded-full cursor-pointer ${`hover:<h2>${user.displayName}</h2>`} `} src={user?.photoURL} alt="" />
+
                             <button onClick={() => logoutUser()} className='btn px-6 bg-third text-primary'>Logout</button>
                         </div> : <div>
                             <Link to='/login' className='btn px-6 bg-third text-primary'>Login</Link>
@@ -69,7 +69,12 @@ const Navbar = () => {
 
                 </div>
             </div>
+
+
+
+          
         </div>
+        
     );
 };
 

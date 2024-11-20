@@ -1,7 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { DataContext } from '../provider/DataProvider';
 import { Link } from 'react-router-dom';
 import DashboardBanner from '../components/DashboardBanner';
+import { Helmet } from 'react-helmet';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Dashboard = () => {
     const { bookedService, setBookedService } = useContext(DataContext)
@@ -9,8 +12,15 @@ const Dashboard = () => {
     const { serviceId, image, serviceName, category, description, pricing, duration, counselor, rating, schedule, counselorDetails } = bookedService;
     // const { counselorImage, experience, qualification, counselorDescription } = bookedService?.counselorDetails;
 
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, // Animation duration in milliseconds
+          once: true,     // Whether animation should happen only once
+        });
+      }, []);
+
     return (
-        <div className='mt-0'>
+        <div className='mt-0' data-aos="fade-down">
             {/* <h2 className='text-center font-bold text-third text-3xl mb-2'>Dashboard</h2>
             <p className='text-center w-full text-gray-500 md:w-3/5  mx-auto'>Your personalized Dashboard offers easy access to upcoming sessions, completed milestones, recommended services, resources, and progress tracking to keep your career journey organized and efficient.</p> */}
             <DashboardBanner></DashboardBanner>
@@ -99,6 +109,11 @@ const Dashboard = () => {
             </div>
             }
             
+            <Helmet>
+        <meta charSet="utf-8" />
+        <title>Dashboard | Pathfinder</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
         </div>
     );
 };

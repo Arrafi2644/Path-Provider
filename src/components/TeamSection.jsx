@@ -1,6 +1,7 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { DataContext } from '../provider/DataProvider';
 import { Link, useNavigate } from 'react-router-dom';
+
 
 const TeamSection = () => {
     const {services, setSelectCounselor} = useContext(DataContext)
@@ -17,6 +18,7 @@ const TeamSection = () => {
         // navigate()
 
     }
+
     return (
         <div className='mt-10'>
              <h2 className='text-center font-bold text-third text-3xl mb-2'>Meet Our Expert Team</h2>  

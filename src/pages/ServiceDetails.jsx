@@ -1,10 +1,13 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { DataContext } from '../provider/DataProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { Helmet } from 'react-helmet';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ServiceDetails = () => {
-    const { services, activeCategory, bookedService , setBookedService } = useContext(DataContext)
+    const { services, activeCategory, bookedService, setBookedService } = useContext(DataContext)
     const [feedback, setFeedback] = useState(null);
 
     const showServiceDetails = services?.filter(item => item.serviceId === activeCategory);
@@ -13,29 +16,36 @@ const ServiceDetails = () => {
     // const { serviceId, image, serviceName, category, description, pricing, duration, counselor, rating } = showServiceDetails?.[0];
     const booked = showServiceDetails?.[0];
     const navigate = useNavigate()
-    const {pathname} = useLocation();
+    const { pathname } = useLocation();
     console.log(pathname);
     console.log(showServiceDetails?.[0]);
+
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, // Animation duration in milliseconds
+          once: true,     // Whether animation should happen only once
+        });
+      }, []);
 
 
     const purchasePlan = () => {
         navigate('/dashboard')
-            setBookedService(booked)
-            toast.success("Congratulation.!!! Successfully purchased.")   
-        }
-    
+        setBookedService(booked)
+        toast.success("Congratulation.!!! Successfully purchased.")
+    }
+
 
     const handleFeedback = (e) => {
-     e.preventDefault();
-     const feedbackMessage = e.target.feedback.value;
-     setFeedback(feedbackMessage);
-     e.target.reset();
+        e.preventDefault();
+        const feedbackMessage = e.target.feedback.value;
+        setFeedback(feedbackMessage);
+        e.target.reset();
 
     }
-  
+
 
     return (
-        <div className='mt-4 p-6 bg-primary rounded-lg'>
+        <div className='mt-4 p-6 bg-primary rounded-lg' data-aos="zoom-out">
             <div className='flex flex-col lg:flex-row gap-6 '>
                 <div>
                     <img className='rounded-lg' src={showServiceDetails?.[0]?.image} alt="" />
@@ -70,18 +80,24 @@ const ServiceDetails = () => {
             </div>
             <div className='mt-8 text-third'>
                 <h2 className='text-2xl font-bold text-center '>Feedback for this service</h2>
-                 <div >
+                <div >
                     {
                         feedback && <div className='p-4 text-gray-500 mt-2 border rounded-lg'>
                             <p>{feedback}</p>
                         </div>
                     }
-                 </div>
+                </div>
                 <form onSubmit={handleFeedback}>
-                <textarea name='feedback' className="textarea text-secondary textarea-bordered w-full mt-4" placeholder="Write your feedback"></textarea>
-                <input className="btn bg-third text-primary" type="submit" value="Feedback" />
+                    <textarea name='feedback' className="textarea text-secondary textarea-bordered w-full mt-4" placeholder="Write your feedback"></textarea>
+                    <input className="btn bg-third text-primary" type="submit" value="Feedback" />
                 </form>
             </div>
+
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Service Details | Pathfinder</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
         </div>
     );
 };
