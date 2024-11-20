@@ -1,9 +1,11 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { toast } from 'react-toastify';
 import { Helmet } from 'react-helmet';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const SignUp = () => {
   const { signUpUser, updateUserNamePhoto, user, setUser, loginWithGoogle } = useContext(AuthContext)
@@ -47,11 +49,13 @@ const SignUp = () => {
             const updatedUser = { ...newUser, displayName: name, photoURL: photo };
             setUser(updatedUser)
             navigate('/')
+            toast.success("Successfully logged in.")
           }).catch(err => {
             console.log(err);
           })
       }).catch(err => {
         console.log(err.message);
+        toast.error("This email already used.!!!")
       })
 
   }
@@ -60,14 +64,23 @@ const SignUp = () => {
     loginWithGoogle()
       .then(result => {
         console.log(result.user);
+        toast.success("Successfully logged in.")
         navigate('/')
       }).catch(err => {
         console.log(err.message);
+        // toast.error("")
       })
-  }
+
+    }
+    useEffect(() => {
+      AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: true,     // Whether animation should happen only once
+      })
+    }, []);
 
   return (
-    <div className="hero bg-base-200 mt-8 rounded-lg py-6">
+    <div data-aos="fade-right" className="hero bg-base-200 mt-8 rounded-lg py-6">
       <div className="hero-content flex-col w-full md:w-9/12 lg:w-1/2">
         <div className="text-center lg:text-left">
           <h1 className="text-3xl font-bold">Sign up now!</h1>
@@ -119,7 +132,6 @@ const SignUp = () => {
           </div>
         </div>
       </div>
-
 
       <Helmet>
         <meta charSet="utf-8" />

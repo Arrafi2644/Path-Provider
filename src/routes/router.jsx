@@ -11,7 +11,6 @@ import Dashboard from "../pages/Dashboard";
 import CounselorDetailsPage from "../pages/CounselorDetailsPage";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
-import privateRoute from "./PrivateRoute";
 import PrivateRoute from "./PrivateRoute";
 
 const Router = createBrowserRouter([
@@ -42,7 +41,7 @@ const Router = createBrowserRouter([
             },
             {
                 path: '/profile',
-                element: <Profile></Profile>
+                element: <PrivateRoute><Profile></Profile></PrivateRoute>
             },
             {
                 path: '/counselorDetails/:id',

@@ -20,7 +20,7 @@ const DataProvider = ({children}) => {
         setSelectCounselor
     }
 
-    // console.log(bookedService);
+    console.log(bookedService);
 
     return (
        <DataContext.Provider value={data}>

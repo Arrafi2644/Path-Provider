@@ -1,9 +1,12 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import ProfileBanner from '../components/ProfileBanner';
 import { AuthContext } from '../provider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import auth from '../firebase/firebase.init';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const Profile = () => {
     const { user, setUser } = useContext(AuthContext)
@@ -27,14 +30,25 @@ const Profile = () => {
         })
 
     }
+
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, // Animation duration in milliseconds
+          once: true,     // Whether animation should happen only once
+        })
+    }, [])
+
+
     return (
         <div>
-            <ProfileBanner></ProfileBanner>
+           <div data-aos="fade-down">
+           <ProfileBanner></ProfileBanner>
+           </div>
 
-            <div className='mt-8 grid grid-cols-1 md:grid-cols-2 gap-6'>
+            <div data-aos="fade-up" className='mt-8 grid grid-cols-1 md:grid-cols-2 gap-6'>
                 {/* user info */}
                 <div className='border rounded-lg p-6'>
-                    <img className='w-32 h-32 object-cover rounded-full mb-4' src={user?.photoURL} alt="" />
+                    <img className='w-32 border h-32 object-cover rounded-full mb-4' src={user?.photoURL} alt="" />
                     <h3 className='text-xl font-bold'>{user?.displayName}</h3>
                     <p className='font-medium'>Email: {user?.email}</p>
                 </div>

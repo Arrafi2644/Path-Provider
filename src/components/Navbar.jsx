@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
 
@@ -19,6 +20,11 @@ const Navbar = () => {
         }
 
     </>
+
+    const handleLogout = () => {
+        logoutUser();
+        toast.warn("Logged out !!!")
+    }
 
     return (
         <div className='bg-primary text-secondary sticky top-0 left-0 z-10'>
@@ -61,7 +67,7 @@ const Navbar = () => {
                     {
                         user ? <div className='flex gap-2 items-center'>
 
-                            <button onClick={() => logoutUser()} className='btn px-6 bg-third text-primary'>Logout</button>
+                            <button onClick={handleLogout} className='btn px-6 bg-third text-primary'>Logout</button>
                         </div> : <div>
                             <Link to='/login' className='btn px-6 bg-third text-primary'>Login</Link>
                         </div>
