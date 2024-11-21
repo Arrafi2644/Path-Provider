@@ -18,6 +18,8 @@ const Navbar = () => {
                 <li><NavLink to='/profile'>My Profile</NavLink></li>
             </>
         }
+        <li><NavLink to='/contact'>Contact Us</NavLink></li>
+
 
     </>
 

@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { DataContext } from '../provider/DataProvider';
+import {Helmet} from "react-helmet";
+
 
 const ServiceCart = ({service}) => {
     // console.log(service);
@@ -27,6 +29,12 @@ const ServiceCart = ({service}) => {
                 <p className='font-medium'>Counselor: {counselor}</p>
                 <Link onClick={()=>handleGetService(serviceId)} className='btn bg-third text-primary'>Learn More</Link>
             </div>
+
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Contact|Pathfinder</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
         </div>
     );
 };

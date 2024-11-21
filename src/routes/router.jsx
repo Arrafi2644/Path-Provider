@@ -13,6 +13,7 @@ import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
 import PrivateRoute from "./PrivateRoute";
 import ForgetPassword from "../pages/ForgetPassword";
+import Contact from "../pages/Contact";
 
 const Router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ const Router = createBrowserRouter([
             {
                 path: '/services/serviceDetails/:id',
                 element : <PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>
+            },
+            {
+               path: '/contact',
+               element: <Contact></Contact>
             },
             {
                 path: '/dashboard',

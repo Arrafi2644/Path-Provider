@@ -21,10 +21,10 @@ const About = () => {
 
     return (
         <div>
-            <div data-aos="fade-up">
+            <div data-aos="fade-down">
                 <AboutBanner></AboutBanner>
             </div>
-            <div className='mt-6' data-aos="fade-down">
+            <div className='mt-6' data-aos="fade-up">
                 <div className="hero pt-10">
                     <div className="hero-content flex-col items-start lg:flex-row-reverse">
                         <img
