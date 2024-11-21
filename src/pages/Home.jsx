@@ -6,6 +6,7 @@ import TeamSection from '../components/TeamSection';
 import { Helmet } from 'react-helmet';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import HomeBanner from '../components/HomeBanner';
 
 const Home = () => {
     useEffect(() => {
@@ -17,16 +18,17 @@ const Home = () => {
 
     return (
         <div>
-           <div data-aos="zoom-in">
-           <Banner></Banner>
+           <div data-aos="zoom-in" className='mb-10'>
+           {/* <Banner></Banner> */}
+           <HomeBanner></HomeBanner>
            </div>
             <div data-aos="fade-up">
             <CoachingBenefits></CoachingBenefits>
             </div>
-            <div data-aos="fade-left">
+            <div data-aos="fade-up">
             <ServiceSection></ServiceSection>
             </div>
-           <div data-aos="fade-right">
+           <div data-aos="fade-up">
            <TeamSection></TeamSection>
            </div>
 

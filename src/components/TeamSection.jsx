@@ -12,7 +12,7 @@ const TeamSection = () => {
     // console.log(services);
     const handleSelect = (id) => {
         
-        console.log(id);
+        // console.log(id);
         // console.log(services);
         const selectedCounselor = services.filter(service => service.counselorId === id)
         // console.log(selectedCounselor);

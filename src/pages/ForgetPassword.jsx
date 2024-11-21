@@ -7,14 +7,14 @@ import { Link, useNavigate } from 'react-router-dom';
 const ForgetPassword = () => {
     const {resetPassword, storedEmail} = useContext(AuthContext)
     const navigate = useNavigate()
-    console.log(storedEmail);
+    // console.log(storedEmail);
 
     const handleResetPassword = (e) => {
         e.preventDefault();
 
         const form = new FormData(e.target)
         const email = form.get('email')
-        console.log(email);
+        // console.log(email);
 
         resetPassword(email)
         .then(()=>{

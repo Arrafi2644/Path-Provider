@@ -5,23 +5,22 @@ import { toast } from 'react-toastify';
 import { Helmet } from 'react-helmet';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { AuthContext } from '../provider/AuthProvider';
+import {handleSetServiceToLocal} from './index.js'
 
 const ServiceDetails = () => {
     const {setBookedService } = useContext(DataContext)
+    const {user} = useContext(AuthContext)
+    const navigate = useNavigate()
+
+    console.log(user.photoURL);
+
     const [feedback, setFeedback] = useState(null);
     const [allServices, setAllServices] = useState([]);
-
-    const navigate = useNavigate()
     const { pathname } = useLocation();
     const activeServiceId = (pathname.split('/'));
     const activeId = activeServiceId[activeServiceId.length - 1];
-    // console.log(services);
-    // console.log(activeId);
-    // console.log(showServiceDetails?.[0]);
     const activeService = allServices?.filter(item => item.serviceId === activeId);
-    // console.log(activeService);
-    // console.log(allServices);
-
     const showDetails = activeService[0];
 // console.log(showDetails);
 
@@ -36,11 +35,13 @@ const ServiceDetails = () => {
             .then(data => setAllServices(data))
       }, []);
 
-
+      const handleBack = () => {
+         navigate(-1)
+      }
 
     const purchasePlan = () => {
-        navigate('/dashboard')
-        setBookedService(showDetails)
+        setBookedService(showDetails);
+        handleSetServiceToLocal(showDetails)
         toast.success("Congratulation.!!! Successfully purchased.")
     }
 
@@ -53,6 +54,7 @@ const ServiceDetails = () => {
 
     }
 
+    handleSetServiceToLocal
 
     return (
         <div className='mt-4 p-6 bg-primary rounded-lg' data-aos="zoom-out">
@@ -82,8 +84,10 @@ const ServiceDetails = () => {
                     </div>
                     <p className=''>{showDetails?.description}</p>
 
-                    <Link to='/services' className="btn bg-third text-primary">Back to services</Link>
-                    <Link onClick={purchasePlan} state={showDetails} className="btn bg-third text-primary">Select this plan</Link>
+                   <div className="flex gap-2">
+                   <Link onClick={handleBack} className="btn bg-third text-primary px-8">  Back</Link>
+                   <Link  onClick={purchasePlan} to='/dashboard' state={showDetails} className="btn bg-third text-primary">Select this plan</Link>
+                   </div>
 
 
                 </div>
@@ -93,7 +97,10 @@ const ServiceDetails = () => {
                 <div >
                     {
                         feedback && <div className='p-4 text-gray-500 mt-2 border rounded-lg'>
-                            <p>{feedback}</p>
+                            <div className='flex gap-3'>
+                               <img className='w-8 h-8 rounded-full ' src={user?.photoURL} alt="" />
+                             <p>{feedback}</p>
+                            </div>
                         </div>
                     }
                 </div>

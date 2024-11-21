@@ -10,6 +10,7 @@ Pathfinder is a career counseling platform designed to guide users in making inf
 - Authentication: Email-password and Google-based login/registration, with password validation and reset functionality.
 - Dynamic Pages: Unique titles for every route with a dynamic data-driven services section.
 - Interactive User Experience: Includes sliders, animations (AOS), and toast notifications for feedback.
+- Responsive Design: Fully responsive across mobile, tablet, and desktop.
 
 ### Technologies: 
 - Frontend: React, Tailwind CSS, DaisyUI

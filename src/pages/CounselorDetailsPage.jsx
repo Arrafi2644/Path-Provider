@@ -11,7 +11,7 @@ const CounselorDetailsPage = () => {
     // const { selectCounselor, services } = useContext(DataContext)
     const [allServices, setAllServices] = useState([])
     const {pathname} = useLocation()
-    console.log(pathname);
+    // console.log(pathname);
     const activeCounselorId = (pathname.split('/'));
     const activeId = activeCounselorId[activeCounselorId.length - 1];
     // console.log(activeId);
@@ -21,7 +21,7 @@ const CounselorDetailsPage = () => {
     // console.log(allServices);
 
     const showCounselorDetails = counselor[0]
-     console.log(showCounselorDetails);
+    //  console.log(showCounselorDetails);
 
 
     useEffect(() => {
