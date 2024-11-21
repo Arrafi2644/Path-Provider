@@ -9,6 +9,7 @@ import HomeBanner from '../components/HomeBanner';
 import Testimonial from '../components/Testimonial';
 
 const Home = () => {
+
     useEffect(() => {
         AOS.init({
           duration: 2000, // Animation duration in milliseconds

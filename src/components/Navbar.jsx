@@ -1,15 +1,18 @@
 import React, { useContext } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import { toast } from 'react-toastify';
 
 const Navbar = () => {
-
+    const {pathname} = useLocation()
+    console.log(pathname);
+    const isExist = pathname.split('/')[1]
+    console.log(isExist)
     const { user, logoutUser } = useContext(AuthContext)
     // console.log(user?.displayName);
 
     const links = <>
-        <li><NavLink to='/'>Home</NavLink></li>
+        <li><NavLink className={isExist === 'counselorDetails' && 'active' } to='/'>Home</NavLink></li>
         <li><NavLink to='/about'>About</NavLink></li>
         <li><NavLink to='/services'>Services</NavLink></li>
         {

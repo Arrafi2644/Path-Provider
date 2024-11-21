@@ -17,7 +17,7 @@ import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
 const Testimonial = () => {
     const [clients, setClients] = useState([])
 
-    console.log(clients);
+    // console.log(clients);
         useEffect(()=>{
             fetch('/testimonial.json')
             .then(res => res.json())
