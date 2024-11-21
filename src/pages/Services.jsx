@@ -26,6 +26,11 @@ const Services = () => {
 
     return (
         <div className=''>
+             <Helmet>
+                <meta charSet="utf-8" />
+                <title>Services | Pathfinder</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <div data-aos="fade-down">
                 <ServicesBanner></ServicesBanner>
             </div>
@@ -36,11 +41,7 @@ const Services = () => {
                 }
             </div>
 
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>Services | Pathfinder</title>
-                <link rel="canonical" href="http://mysite.com/example" />
-            </Helmet>
+           
         </div>
     );
 };

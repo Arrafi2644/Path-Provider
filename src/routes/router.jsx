@@ -29,6 +29,7 @@ const Router = createBrowserRouter([
                 path: '/about',
                 element: <About></About>
             },
+          
             {
                 path: '/services',
                 element: <Services></Services>
@@ -37,10 +38,7 @@ const Router = createBrowserRouter([
                 path: '/services/serviceDetails/:id',
                 element : <PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>
             },
-            {
-               path: '/contact',
-               element: <Contact></Contact>
-            },
+            
             {
                 path: '/dashboard',
                 element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
@@ -64,7 +62,11 @@ const Router = createBrowserRouter([
             {
                 path: '/forgetPassword',
                 element: <ForgetPassword></ForgetPassword>
-            }
+            },
+            {
+                path: '/contact',
+                element: <Contact></Contact>
+             }
         ]
     },
 ]);

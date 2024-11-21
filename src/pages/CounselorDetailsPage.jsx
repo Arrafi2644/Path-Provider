@@ -10,13 +10,13 @@ import 'aos/dist/aos.css';
 const CounselorDetailsPage = () => {
     // const { selectCounselor, services } = useContext(DataContext)
     const [allServices, setAllServices] = useState([])
-    const {pathname} = useLocation()
+    const { pathname } = useLocation()
     // console.log(pathname);
     const activeCounselorId = (pathname.split('/'));
     const activeId = activeCounselorId[activeCounselorId.length - 1];
     // console.log(activeId);
 
-    const counselor= allServices.filter(service => service.counselorId == activeId)
+    const counselor = allServices.filter(service => service.counselorId == activeId)
     // console.log(counselor);
     // console.log(allServices);
 
@@ -31,8 +31,8 @@ const CounselorDetailsPage = () => {
         });
 
         fetch('/services.json')
-        .then(res => res.json())
-        .then(data => setAllServices(data))
+            .then(res => res.json())
+            .then(data => setAllServices(data))
 
     }, []);
 
@@ -69,15 +69,17 @@ const CounselorDetailsPage = () => {
 
                     </div>
                     <Link onClick={handleBack} className='btn bg-third text-primary max-w-32'> <span><FaArrowLeftLong></FaArrowLeftLong></span> Back</Link>
-                    <Helmet>
-                        <meta charSet="utf-8" />
-                        <title>CounselorDetails | Pathfinder</title>
-                        <link rel="canonical" href="http://mysite.com/example" />
-                    </Helmet>
+
                 </div> : <div className='mt-8'>
                     <p>Go back to home and select a counselor to see this counselor's details <Link className='text-third font-semibold underline' to='/'>Go Home</Link></p>
                 </div>
             }
+
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title> CounselorDetails | Pathfinder</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
         </div>
     );
 };
