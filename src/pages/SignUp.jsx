@@ -49,13 +49,19 @@ const SignUp = () => {
             const updatedUser = { ...newUser, displayName: name, photoURL: photo };
             setUser(updatedUser)
             navigate('/')
-            toast.success("Successfully logged in.")
+            toast.success("Successfully logged in." , {
+              autoClose: 3000,
+              position: 'top-center'
+            })
           }).catch(err => {
             // console.log(err);
           })
       }).catch(err => {
         // console.log(err.message);
-        toast.error("This email already used.!!!")
+        toast.error("This email already used.!!!" , {
+          autoClose: 3000,
+          position: 'top-center'
+        })
       })
 
   }
@@ -64,7 +70,10 @@ const SignUp = () => {
     loginWithGoogle()
       .then(result => {
         // console.log(result.user);
-        toast.success("Successfully logged in.")
+        toast.success("Successfully logged in." , {
+          autoClose: 3000,
+          position: 'top-center'
+        })
         navigate('/')
       }).catch(err => {
         // console.log(err.message);
@@ -74,7 +83,7 @@ const SignUp = () => {
     }
     useEffect(() => {
       AOS.init({
-        duration: 1000, // Animation duration in milliseconds
+        duration: 2000, // Animation duration in milliseconds
         once: true,     // Whether animation should happen only once
       })
     }, []);

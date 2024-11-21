@@ -16,4 +16,7 @@ Pathfinder is a career counseling platform designed to guide users in making inf
 - Frontend: React, Tailwind CSS, DaisyUI
 - Routing: React Router
 - Backend & Hosting: Firebase (Authentication, Firestore, Hosting)
-- Animations & Interactivity: AOS library
+- Animations & Interactivity: AOS library, swiper slider
+
+### Requirements: https://docs.google.com/document/d/1ErVVKPWEMzrmOn4bp18Vba0nfUpK-KZpqcTvSNffLKU/edit?usp=drive_link
+

@@ -36,11 +36,17 @@ const Login = () => {
       .then(result => {
         // console.log(result);
         state ? navigate(state) : navigate('/')
-        toast.success("Successfully logged in.")
+        toast.success("Successfully logged in.", {
+          autoClose: 3000,
+          position: 'top-center'
+        })
 
       }).catch(err => {
         // console.log(err.message);
-        toast.error("Incorrect password!!!")
+        toast.error("Incorrect email or password!!!", {
+          autoClose: 3000,
+          position: 'top-center'
+        })
         setStoredEmail(email);
       })
 
@@ -51,7 +57,10 @@ const Login = () => {
       .then(result => {
         // console.log(result);
         state ? navigate(state) : navigate('/')
-        toast.success("Logged in successfully.")
+        toast.success("Logged in successfully.", {
+          autoClose: 3000,
+          position: 'top-center'
+        })
       }).catch(err => {
         // console.log(err.message);
       })
@@ -65,9 +74,6 @@ const Login = () => {
           <h1 className="text-3xl font-bold">Login now!</h1>
         </div>
         <div className="card bg-base-100 w-full shrink-0 shadow-2xl">
-
-
-
           <div className='px-8 pt-8'>
             <button onClick={handleLoginWithGoogle} className="btn btn-outline w-full hover:text-primary hover:bg-third"><span><FaGoogle></FaGoogle></span> Sign in with Google</button>
             <div className="divider">or</div>

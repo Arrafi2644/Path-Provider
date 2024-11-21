@@ -13,7 +13,7 @@ const ServiceDetails = () => {
     const {user} = useContext(AuthContext)
     const navigate = useNavigate()
 
-    console.log(user.photoURL);
+    // console.log(user.photoURL);
 
     const [feedback, setFeedback] = useState(null);
     const [allServices, setAllServices] = useState([]);
@@ -42,7 +42,10 @@ const ServiceDetails = () => {
     const purchasePlan = () => {
         setBookedService(showDetails);
         handleSetServiceToLocal(showDetails)
-        toast.success("Congratulation.!!! Successfully purchased.")
+        toast.success("Congratulation.!!! Successfully booked service." , {
+            autoClose: 3000,
+            position: 'top-center'
+          })
     }
 
 
@@ -65,15 +68,15 @@ const ServiceDetails = () => {
                 <div className='text-gray-500 space-y-2'>
                     <h2 className='text-2xl font-semibold text-third'>{showDetails?.serviceName}</h2>
                     <div className='flex items-center justify-between flex-col md:flex-row gap-6'>
-                        <p className=''>Category: {showDetails?.category}</p>
-                        <p className=''>Fee: {showDetails?.pricing}</p>
+                        <p className=''><span className='font-medium'>Category:</span> {showDetails?.category}</p>
+                        <p className=''><span className='font-medium'>Fee:</span> {showDetails?.pricing}</p>
                     </div>
                     <div className='flex items-center justify-between flex-col md:flex-row gap-6'>
-                        <p>Duration: {showDetails?.duration}</p>
-                        <p className=''>Counselor: {showDetails?.counselor}</p>
+                        <p><span className='font-medium'>Duration:</span> {showDetails?.duration}</p>
+                        <p className=''><span className='font-medium'>Counselor:</span> {showDetails?.counselor}</p>
                     </div>
                     <div className='flex items-center gap-4'>
-                        <p className=''>Rating: {showDetails?.rating}</p>
+                        <p className=''><span className='font-medium'>Rating:</span> {showDetails?.rating}</p>
                         <div className="rating">
                             <input type="radio" name="rating-2" className="mask h-5 w-5 mask-star-2 bg-orange-400" />
                             <input type="radio " name="rating-2" className="mask h-5 w-5 mask-star-2 bg-orange-400" defaultChecked />

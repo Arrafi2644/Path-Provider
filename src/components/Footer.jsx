@@ -14,17 +14,17 @@ const Footer = () => {
                 </aside>
                 <nav className='flex flex-col gap-4'>
                     <h6 className="footer-title">Services</h6>
-                    <a className="link link-hover">Branding</a>
-                    <a className="link link-hover">Design</a>
-                    <a className="link link-hover">Marketing</a>
-                    <a className="link link-hover">Advertisement</a>
+                    <a className="link link-hover">Time management</a>
+                    <a className="link link-hover">Resume Review</a>
+                    <a className="link link-hover">Mock Interviews</a>
+                    <a className="link link-hover">Networking</a>
                 </nav>
                 <nav className='flex flex-col gap-4'>
                     <h6 className="footer-title">Pages</h6>
+                    <a className="link link-hover">Home</a>
                     <a className="link link-hover">About us</a>
+                    <a className="link link-hover">Services</a>
                     <a className="link link-hover">Contact</a>
-                    <a className="link link-hover">Jobs</a>
-                    <a className="link link-hover">Councilors</a>
                 </nav>
                 <nav className='lg:col-span-2'>
                     <h6 className="footer-title">Join Newsletter</h6>

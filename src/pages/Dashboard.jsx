@@ -10,18 +10,14 @@ import { handleGetServiceFromLocal } from "../components/index.js";
 const Dashboard = () => {
     // const [service, setService] = useState(null)
     const { bookedService, setBookedService } = useContext(DataContext)
-    // console.log(bookedService);
-    // const { serviceId, image, serviceName, category, description, pricing, duration, counselor, rating, schedule, counselorDetails } = bookedService;
-    // const { counselorImage, experience, qualification, counselorDescription } = bookedService?.counselorDetails;
+    
     const { state } = useLocation()
-    // const { serviceId, image, serviceName, category, description, pricing, duration, counselor, rating, schedule, counselorDetails } = state;
-    console.log(state);
-    console.log(bookedService);
+
     const length = handleGetServiceFromLocal().length
-    console.log(length);
-    console.log(handleGetServiceFromLocal()[length - 1]);
+    // console.log(length);
+    // console.log(handleGetServiceFromLocal()[length - 1]);
     const showService = handleGetServiceFromLocal()[length - 1];
-    console.log(showService);
+    // console.log(showService);
 
     useEffect(() => {
         AOS.init({
@@ -51,15 +47,15 @@ const Dashboard = () => {
                                 <div className='text-gray-500 space-y-2'>
                                     <h2 className='text-xl font-semibold text-third'>{state?.serviceName}</h2>
                                     <div className='flex md:items-center justify-between flex-col md:flex-row gap-6'>
-                                        <p className=''>Category: {state?.category}</p>
-                                        <p className=''>Fee: {state?.pricing}</p>
+                                        <p className=''><span className='font-semibold'>Category:</span> {state?.category}</p>
+                                        <p className=''><span className='font-semibold'>Fee:</span> {state?.pricing}</p>
                                     </div>
                                     <div className='flex md:items-center justify-between flex-col md:flex-row gap-6'>
-                                        <p>Duration: {state?.duration}</p>
-                                        <p className=''>Counselor: {state?.counselor}</p>
+                                        <p><span className='font-semibold'>Duration:</span> {state?.duration}</p>
+                                        <p className=''><span className='font-semibold'>Counselor:</span> {state?.counselor}</p>
                                     </div>
                                     <div className='flex items-center gap-4'>
-                                        <p className=''>Rating: {state?.rating}</p>
+                                        <p className=''><span className='font-semibold'>Rating:</span> {state?.rating}</p>
                                         <div className="rating">
                                             <input type="radio" name="rating-2" className="mask h-5 w-5 mask-star-2 bg-orange-400" />
                                             <input type="radio " name="rating-2" className="mask h-5 w-5 mask-star-2 bg-orange-400" defaultChecked />
@@ -78,12 +74,12 @@ const Dashboard = () => {
                                     <div>
                                         <img className=' w-full md:w-[300px] lg:w-[400px] rounded-lg' src={state?.counselorDetails?.counselorImage} alt="" />
                                     </div>
-                                    <div className='text-gray-500 font-medium space-y-2'>
-                                        <h3>Name: {state?.counselor}</h3>
-                                        <h3>Expert: {state?.serviceName}</h3>
-                                        <p>Qualification: {state?.counselorDetails?.qualification}</p>
-                                        <p>Experience: {state?.counselorDetails?.experience}</p>
-                                        <p>Description: {state?.counselorDetails?.counselorDescription}</p>
+                                    <div className='text-gray-500 space-y-2'>
+                                        <h3><span className='font-semibold'>Name:</span> {state?.counselor}</h3>
+                                        <h3><span className='font-semibold'>Expert:</span> {state?.serviceName}</h3>
+                                        <p><span className='font-semibold'>Qualification:</span> {state?.counselorDetails?.qualification}</p>
+                                        <p><span className='font-semibold'>Experience:</span> {state?.counselorDetails?.experience}</p>
+                                        <p><span className='font-semibold'>Description:</span> {state?.counselorDetails?.counselorDescription}</p>
                                     </div>
 
                                 </div>
@@ -96,8 +92,8 @@ const Dashboard = () => {
                                         <thead>
                                             <tr>
                                                 <th></th>
-                                                <th>Day</th>
-                                                <th>Time</th>
+                                                <th className='font-medium'>Day</th>
+                                                <th className='font-medium'>Time</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -130,15 +126,15 @@ const Dashboard = () => {
                                     <div className='text-gray-500 space-y-2'>
                                         <h2 className='text-xl font-semibold text-third'>{showService?.serviceName}</h2>
                                         <div className='flex md:items-center justify-between flex-col md:flex-row gap-6'>
-                                            <p className=''>Category: {showService?.category}</p>
-                                            <p className=''>Fee: {showService?.pricing}</p>
+                                            <p className=''><span className='font-semibold'>Category:</span> {showService?.category}</p>
+                                            <p className=''><span className='font-semibold'>Fee:</span> {showService?.pricing}</p>
                                         </div>
                                         <div className='flex md:items-center justify-between flex-col md:flex-row gap-6'>
-                                            <p>Duration: {showService?.duration}</p>
-                                            <p className=''>Counselor: {showService?.counselor}</p>
+                                            <p><span className='font-semibold'>Duration:</span> {showService?.duration}</p>
+                                            <p className=''><span className='font-semibold'>Counselor:</span> {showService?.counselor}</p>
                                         </div>
                                         <div className='flex items-center gap-4'>
-                                            <p className=''>Rating: {showService?.rating}</p>
+                                            <p className=''><span className='font-semibold'>Rating:</span> {showService?.rating}</p>
                                             <div className="rating">
                                                 <input type="radio" name="rating-2" className="mask h-5 w-5 mask-star-2 bg-orange-400" />
                                                 <input type="radio " name="rating-2" className="mask h-5 w-5 mask-star-2 bg-orange-400" defaultChecked />
@@ -157,12 +153,12 @@ const Dashboard = () => {
                                         <div>
                                             <img className=' w-full md:w-[300px] lg:w-[400px] rounded-lg' src={showService?.counselorDetails?.counselorImage} alt="" />
                                         </div>
-                                        <div className='text-gray-500 font-medium space-y-2'>
-                                            <h3>Name: {showService?.counselor}</h3>
-                                            <h3>Expert: {showService?.serviceName}</h3>
-                                            <p>Qualification: {showService?.counselorDetails?.qualification}</p>
-                                            <p>Experience: {showService?.counselorDetails?.experience}</p>
-                                            <p>Description: {showService?.counselorDetails?.counselorDescription}</p>
+                                        <div className='text-gray-500 space-y-2'>
+                                            <h3><span className='font-semibold'>Name:</span> {showService?.counselor}</h3>
+                                            <h3><span className='font-semibold'>Expert:</span> {showService?.serviceName}</h3>
+                                            <p><span className='font-semibold'>Qualification:</span> {showService?.counselorDetails?.qualification}</p>
+                                            <p><span className='font-semibold'>Experience:</span> {showService?.counselorDetails?.experience}</p>
+                                            <p><span className='font-semibold'>Description:</span> {showService?.counselorDetails?.counselorDescription}</p>
                                         </div>
 
                                     </div>
@@ -175,8 +171,8 @@ const Dashboard = () => {
                                             <thead>
                                                 <tr>
                                                     <th></th>
-                                                    <th>Day</th>
-                                                    <th>Time</th>
+                                                    <th className='font-medium'>Day</th>
+                                                    <th className='font-medium'>Time</th>
                                                 </tr>
                                             </thead>
                                             <tbody>

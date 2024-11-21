@@ -25,7 +25,10 @@ const Navbar = () => {
 
     const handleLogout = () => {
         logoutUser();
-        toast.warn("Logged out !!!")
+        toast.success("Log out successfully !!!", {
+            autoClose: 3000,
+            position: 'top-center'
+          })
     }
 
     return (

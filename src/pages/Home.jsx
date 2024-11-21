@@ -11,7 +11,7 @@ import Testimonial from '../components/Testimonial';
 const Home = () => {
     useEffect(() => {
         AOS.init({
-          duration: 3000, // Animation duration in milliseconds
+          duration: 2000, // Animation duration in milliseconds
           once: true,     // Whether animation should happen only once
         });
       }, []);

@@ -55,10 +55,10 @@ const CounselorDetailsPage = () => {
                         <img className='rounded-lg' src={showCounselorDetails?.counselorDetails?.counselorImage} alt="" />
                     </div>
                     <div className='space-y-2 text-gray-500'>
-                        <h3 className='text-xl font-bold'>Name: {showCounselorDetails?.counselor}</h3>
-                        <h4>Expertise: {showCounselorDetails?.serviceName}</h4>
-                        <p>Qualification: {showCounselorDetails?.counselorDetails?.qualification}</p>
-                        <p>Experience: {showCounselorDetails?.counselorDetails?.experience}</p>
+                        <h3 className='text-xl font-bold'><span className='font-medium'>Name:</span> {showCounselorDetails?.counselor}</h3>
+                        <h4><span className='font-medium'>Expertise:</span> {showCounselorDetails?.serviceName}</h4>
+                        <p><span className='font-medium'>Qualification:</span> {showCounselorDetails?.counselorDetails?.qualification}</p>
+                        <p><span className='font-medium'>Experience:</span> {showCounselorDetails?.counselorDetails?.experience}</p>
                         <p>{showCounselorDetails?.counselorDetails?.counselorDescription}</p>
                     </div>
                     <div className='flex gap-6 text-3xl items-center my-4'>
