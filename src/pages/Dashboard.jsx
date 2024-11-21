@@ -5,7 +5,7 @@ import DashboardBanner from '../components/DashboardBanner';
 import { Helmet } from 'react-helmet';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { handleGetServiceFromLocal } from "./index.js";
+import { handleGetServiceFromLocal } from "../components/index.js";
 
 const Dashboard = () => {
     // const [service, setService] = useState(null)

@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { AuthContext } from '../provider/AuthProvider';
-import {handleSetServiceToLocal} from './index.js'
+import {handleSetServiceToLocal} from '../components/index.js'
 
 const ServiceDetails = () => {
     const {setBookedService } = useContext(DataContext)

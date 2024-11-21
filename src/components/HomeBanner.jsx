@@ -1,24 +1,27 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules'; // Note the updated path for modules
+import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import { Link } from 'react-router-dom';
-
-
 
 const HomeBanner = () => {
     return (
         <Swiper
-        modules={[Autoplay]}
-        autoplay={{
-            delay: 3000, // Time between slides (in ms)
-            disableOnInteraction: false,
-        }}
-        loop={true}
-        spaceBetween={30}
-        slidesPerView={1}
-    >
+            modules={[Navigation, Autoplay]}
+            navigation={{
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }}
+            autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+            }}
+            loop={true}
+            spaceBetween={30}
+            slidesPerView={1}
+        >
         <SwiperSlide>
         <div id="slide1" className="carousel-item relative w-full">
             <img
@@ -31,8 +34,8 @@ const HomeBanner = () => {
                 <Link to='/services' className="btn bg-third text-primary">Start Your Journey</Link>
             </div>
             <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                <a href="#slide3" className="btn bg-[#ffffff4a] text-third ">❮</a>
-                <a href="#slide2" className="btn bg-[#ffffff4a] text-third ">❯</a>
+                {/* <a href="#slide3" className="btn bg-[#ffffff4a] text-third ">❮</a>
+                <a href="#slide2" className="btn bg-[#ffffff4a] text-third ">❯</a> */}
             </div>
         </div>
         </SwiperSlide>
@@ -50,8 +53,8 @@ const HomeBanner = () => {
                 <button className="btn bg-third text-primary">Explore Services</button>
             </div>
             <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                <a href="#slide1" className="btn bg-[#ffffff4a] text-third ">❮</a>
-                <a href="#slide3" className="btn bg-[#ffffff4a] text-third ">❯</a>
+                {/* <a href="#slide1" className="btn bg-[#ffffff4a] text-third ">❮</a>
+                <a href="#slide3" className="btn bg-[#ffffff4a] text-third ">❯</a> */}
             </div>
         </div>
         </SwiperSlide>
@@ -67,17 +70,15 @@ const HomeBanner = () => {
                 <button className="btn bg-third text-primary">See Success Stories</button>
             </div>
             <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                <a href="#slide2" className="btn bg-[#ffffff4a] text-third ">❮</a>
-                <a href="#slide1" className="btn bg-[#ffffff4a] text-third ">❯</a>
+                {/* <a href="#slide2" className="btn bg-[#ffffff4a] text-third ">❮</a>
+                <a href="#slide1" className="btn bg-[#ffffff4a] text-third ">❯</a> */}
             </div>
         </div>
         </SwiperSlide>
-    </Swiper>
 
-    //     <div className="carousel w-full mb-10">
-       
-     
-    // </div>
+        <div className="swiper-button-prev  rounded-full p-2 text-white"></div>
+        <div className="swiper-button-next rounded-full p-2 text-white"></div>
+    </Swiper>
     );
 };
 

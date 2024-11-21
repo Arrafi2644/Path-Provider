@@ -1,0 +1,39 @@
+  [
+    {
+        "id": "1",
+        "name": "Sarah Johnson",
+        "image": "https://i.ibb.co.com/cg2bnmt/image.png",
+        "course": "Job Placement Support",
+        "review": "Job Placement Support was exactly what I needed. The team guided me through every step, from interview prep to job searching, and helped me secure my first job."
+      },
+    {
+        "id": "2",
+      "name": "John Doe",
+      "image": "https://i.ibb.co.com/rp7VFMj/image.png",
+      "course": "Career Counseling Sessions",
+      "review": "The Career Counseling Sessions helped me clarify my career goals. The personalized advice gave me the confidence to pursue my true passions."
+    },
+   
+    {
+        "id": "3",
+      "name": "Michael Brown",
+      "image": "https://i.ibb.co.com/n1Crqwy/image.png",
+      "course": "Skill Development Workshop",
+      "review": "The Skill Development Workshop gave me the hands-on skills I needed to excel in my field. I feel more prepared to take on challenges in my career."
+    },
+    {
+        "id": "4",
+      "name": "Emily Daniel",
+      "image": "https://i.ibb.co.com/yRTqtjH/image.png",
+      "course": "Time Management Workshop",
+      "review": "The Time Management Workshop completely changed how I approach my day. I’m now more productive, with better balance between work and personal life."
+    },
+    {
+      "id": "5",
+      "name": "David Smith",
+      "image": "https://i.ibb.co.com/2PLYB8z/image.png",
+      "course": "Freelancing Career Counseling",
+      "review": "Freelancing Career Counseling was a game-changer for me. The expert advice and insights I received helped me start and grow my freelancing business."
+    }
+  ]
+  

@@ -6,6 +6,8 @@ import { FaRightLong } from 'react-icons/fa6';
 import { Helmet } from 'react-helmet';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Count from '../components/Count';
+import Faq from '../components/Faq';
 
 const About = () => {
 
@@ -22,7 +24,7 @@ const About = () => {
             <div data-aos="fade-up">
                 <AboutBanner></AboutBanner>
             </div>
-            <div  data-aos="fade-down">
+            <div className='mt-6' data-aos="fade-down">
                 <div className="hero pt-10">
                     <div className="hero-content flex-col items-start lg:flex-row-reverse">
                         <img
@@ -37,6 +39,12 @@ const About = () => {
                             <button className="btn bg-third text-primary">Lets Join <span><FaRightLong></FaRightLong></span></button>
                         </div>
                     </div>
+                </div>
+                <div data-aos="fade-up">
+                <Count></Count>
+                </div>
+                <div data-aos="fade-down">
+                    <Faq></Faq>
                 </div>
             </div>
             <Helmet>
