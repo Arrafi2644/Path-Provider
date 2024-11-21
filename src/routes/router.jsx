@@ -12,6 +12,7 @@ import CounselorDetailsPage from "../pages/CounselorDetailsPage";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
 import PrivateRoute from "./PrivateRoute";
+import ForgetPassword from "../pages/ForgetPassword";
 
 const Router = createBrowserRouter([
     {
@@ -54,6 +55,10 @@ const Router = createBrowserRouter([
             {
                 path: '/signup',
                 element: <SignUp></SignUp>
+            },
+            {
+                path: '/forgetPassword',
+                element: <ForgetPassword></ForgetPassword>
             }
         ]
     },

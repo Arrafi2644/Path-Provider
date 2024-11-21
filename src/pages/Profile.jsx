@@ -19,14 +19,14 @@ const Profile = () => {
         const name = form.get('name')
         const photo = form.get('photo')
 
-        console.log(name, photo);
+        // console.log(name, photo);
 
         updateProfile(auth.currentUser, {displayName:name, photoURL:photo})
         .then(()=>{
           const newUserInfo = {...user, displayName:name, photoURL:photo }
           setUser(newUserInfo)
         }).catch(err => {
-            console.log(err.message);
+            // console.log(err.message);
         })
 
     }

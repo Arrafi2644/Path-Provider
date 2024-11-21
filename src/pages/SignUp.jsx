@@ -22,7 +22,7 @@ const SignUp = () => {
     const photo = form.get('photo');
     const email = form.get('email');
     const password = form.get('password');
-    console.log(name, photo, email, password);
+    // console.log(name, photo, email, password);
 
     if (password.length < 6) {
       toast.error("Password must be longer or equal 6 character.!!!")
@@ -51,10 +51,10 @@ const SignUp = () => {
             navigate('/')
             toast.success("Successfully logged in.")
           }).catch(err => {
-            console.log(err);
+            // console.log(err);
           })
       }).catch(err => {
-        console.log(err.message);
+        // console.log(err.message);
         toast.error("This email already used.!!!")
       })
 
@@ -63,11 +63,11 @@ const SignUp = () => {
   const handleSignUpWithGoogle = () => {
     loginWithGoogle()
       .then(result => {
-        console.log(result.user);
+        // console.log(result.user);
         toast.success("Successfully logged in.")
         navigate('/')
       }).catch(err => {
-        console.log(err.message);
+        // console.log(err.message);
         // toast.error("")
       })
 

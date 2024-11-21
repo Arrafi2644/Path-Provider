@@ -9,7 +9,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Login = () => {
-  const { loginUser, loginWithGoogle } = useContext(AuthContext)
+  const { loginUser, loginWithGoogle, storedEmail, setStoredEmail } = useContext(AuthContext)
   const navigate = useNavigate()
   const { pathname, state } = useLocation();
   // console.log(state);
@@ -30,7 +30,7 @@ const Login = () => {
 
     const email = form.get('email')
     const password = form.get('password')
-    console.log(email, password);
+    // console.log(email, password);
 
     loginUser(email, password)
       .then(result => {
@@ -39,8 +39,9 @@ const Login = () => {
         toast.success("Successfully logged in.")
 
       }).catch(err => {
-        console.log(err.message);
+        // console.log(err.message);
         toast.error("Incorrect password!!!")
+        setStoredEmail(email);
       })
 
   }
@@ -48,11 +49,11 @@ const Login = () => {
   const handleLoginWithGoogle = () => {
     loginWithGoogle()
       .then(result => {
-        console.log(result);
+        // console.log(result);
         state ? navigate(state) : navigate('/')
         toast.success("Logged in successfully.")
       }).catch(err => {
-        console.log(err.message);
+        // console.log(err.message);
       })
   }
 
@@ -89,7 +90,7 @@ const Login = () => {
                 </Link>
               </div>
               <label className="label">
-                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                <Link to='/forgetPassword' className="label-text-alt link link-hover">Forgot password?</Link>
               </label>
             </div>
             <div className="form-control mt-6">

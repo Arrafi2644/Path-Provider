@@ -19,11 +19,11 @@ const ServiceDetails = () => {
     // console.log(activeId);
     // console.log(showServiceDetails?.[0]);
     const activeService = allServices?.filter(item => item.serviceId === activeId);
-    console.log(activeService);
+    // console.log(activeService);
     // console.log(allServices);
 
     const showDetails = activeService[0];
-console.log(showDetails);
+// console.log(showDetails);
 
     useEffect(() => {
         AOS.init({
